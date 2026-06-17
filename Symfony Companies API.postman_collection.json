@@ -1,0 +1,415 @@
+{
+  "info": {
+    "_postman_id": "ec6f4a63-7d49-4b8c-958a-1568e6e20326",
+    "name": "Symfony Companies API",
+    "description": "CRUD operations for Companies based on the provided Symfony Controller",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "52391161",
+    "_collection_link": "https://go.postman.co/collection/52391161-ec6f4a63-7d49-4b8c-958a-1568e6e20326?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "1. Get All Companies",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/companies",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "companies"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "1. Get All Companies",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/companies",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "companies"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Host",
+              "value": "localhost:8000"
+            },
+            {
+              "key": "Connection",
+              "value": "close"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "PHP/8.5.0"
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, private"
+            },
+            {
+              "key": "Date",
+              "value": "Wed, 17 Jun 2026 12:14:29 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "X-Robots-Tag",
+              "value": "noindex"
+            }
+          ],
+          "cookie": [],
+          "body": "[\n    {\n        \"id\": \"1\",\n        \"name\": \"Global Tech\",\n        \"industry\": \"IT\",\n        \"employees_count\": \"500\"\n    },\n    {\n        \"id\": \"2\",\n        \"name\": \"ТОВ БудПром\",\n        \"industry\": \"Будівництво\",\n        \"employees_count\": \"120\"\n    },\n    {\n        \"id\": \"3\",\n        \"name\": \"АгроСвіт\",\n        \"industry\": \"Сільське господарство\",\n        \"employees_count\": \"350\"\n    }\n]"
+        }
+      ]
+    },
+    {
+      "name": "2. Get Company By ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/companies/1",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "companies",
+            "1"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "2. Get Company By ID",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/companies/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "companies",
+                "1"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Host",
+              "value": "localhost:8000"
+            },
+            {
+              "key": "Connection",
+              "value": "close"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "PHP/8.5.0"
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, private"
+            },
+            {
+              "key": "Date",
+              "value": "Wed, 17 Jun 2026 12:14:36 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "X-Robots-Tag",
+              "value": "noindex"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"id\": \"1\",\n    \"name\": \"Global Tech\",\n    \"industry\": \"IT\",\n    \"employees_count\": \"500\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "3. Create Company",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Нова ІТ Компанія\",\n  \"industry\": \"Розробка ПЗ\",\n  \"employees_count\": 42\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/companies",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "companies"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "3. Create Company",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Нова ІТ Компанія\",\n  \"industry\": \"Розробка ПЗ\",\n  \"employees_count\": 42\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/companies",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "companies"
+              ]
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Host",
+              "value": "localhost:8000"
+            },
+            {
+              "key": "Connection",
+              "value": "close"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "PHP/8.5.0"
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, private"
+            },
+            {
+              "key": "Date",
+              "value": "Wed, 17 Jun 2026 12:14:43 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "X-Robots-Tag",
+              "value": "noindex"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"name\": \"Нова ІТ Компанія\",\n    \"industry\": \"Розробка ПЗ\",\n    \"employees_count\": 42,\n    \"id\": \"22\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "4. Update Company",
+      "request": {
+        "method": "PATCH",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"industry\": \"Кібербезпека\",\n  \"employees_count\": 150\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/companies/1",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "companies",
+            "1"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "4. Update Company",
+          "originalRequest": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"industry\": \"Кібербезпека\",\n  \"employees_count\": 150\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/companies/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "companies",
+                "1"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Host",
+              "value": "localhost:8000"
+            },
+            {
+              "key": "Connection",
+              "value": "close"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "PHP/8.5.0"
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, private"
+            },
+            {
+              "key": "Date",
+              "value": "Wed, 17 Jun 2026 12:14:50 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "X-Robots-Tag",
+              "value": "noindex"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"id\": \"1\",\n    \"name\": \"Global Tech\",\n    \"industry\": \"Кібербезпека\",\n    \"employees_count\": 150\n}"
+        }
+      ]
+    },
+    {
+      "name": "5. Delete Company",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/companies/1",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "companies",
+            "1"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "5. Delete Company",
+          "originalRequest": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/companies/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "companies",
+                "1"
+              ]
+            }
+          },
+          "status": "No Content",
+          "code": 204,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Host",
+              "value": "localhost:8000"
+            },
+            {
+              "key": "Connection",
+              "value": "close"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "PHP/8.5.0"
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, private"
+            },
+            {
+              "key": "Date",
+              "value": "Wed, 17 Jun 2026 12:15:01 GMT"
+            },
+            {
+              "key": "X-Robots-Tag",
+              "value": "noindex"
+            }
+          ],
+          "cookie": [],
+          "body": null
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:8000"
+    }
+  ]
+}

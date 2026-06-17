@@ -1,0 +1,481 @@
+{
+  "info": {
+    "_postman_id": "4fa6ceee-b71e-471e-8161-ddfe158b1479",
+    "name": "Laravel Companies API",
+    "description": "CRUD operations for Companies based on the provided Laravel Controller and web.php routes",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "52391161",
+    "_collection_link": "https://go.postman.co/collection/52391161-4fa6ceee-b71e-471e-8161-ddfe158b1479?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "1. Get All Companies",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/companies",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "companies"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "1. Get All Companies",
+          "originalRequest": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/companies",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "companies"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Host",
+              "value": "localhost:8000"
+            },
+            {
+              "key": "Connection",
+              "value": "close"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "PHP/8.5.0"
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, private"
+            },
+            {
+              "key": "Date",
+              "value": "Wed, 17 Jun 2026 12:11:48 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Set-Cookie",
+              "value": "XSRF-TOKEN=eyJpdiI6Ik91TkFnU1YvMkNTNGtlLzBnMDZ6Q0E9PSIsInZhbHVlIjoiMTVmRGc0YXZVUVV3TjdWaUsrRjMyUWRzYUx5UmE0TjI5QzFDR2V4d2ZqWnB3Skx5ZnkwSUFPQS8zVzhaMGdNR3JsQkptZ0hKMXJrSVZlK3hKOExENXZOT0JsRytPVzhlRkw2OWRPMGc3OSs5NHc2VEk2TmRBWmZ3NU81REhqSnQiLCJtYWMiOiJmMzQyODUwYzgwYzA3M2E4MDhjMjRlOTgzOTI0ZGU0MTVkMzg2ZWU1ZTI2NGVmODRkODc3N2IwZmQwYzhkOTQxIiwidGFnIjoiIn0%3D; expires=Wed, 17 Jun 2026 14:11:48 GMT; Max-Age=7200; path=/; samesite=lax"
+            },
+            {
+              "key": "Set-Cookie",
+              "value": "laravel-session=eyJpdiI6IjBrY2grZCtZZ2pWQTdGYlVNb3AwN2c9PSIsInZhbHVlIjoiV2dZaHBpSDNCWjdtUkN4SWR2aWpGSTR5MGZVSjRCZlRrcDNIV1JqSlhMaE9rODBFbjJzaGFDWEpRekpRVTdsQTQ2WFg2cU15UmgvTU01akZUYkxOOXVrZzBOVEZyMDFITlpwSFV1elZUZDIrcE8ydE9RQzVZamQ1QVVrSVh3OWgiLCJtYWMiOiJkN2ZiNWYwODgyM2VlZmU1NTRhNmJmMDkzZWIxYmZiOGIxN2U5YWViZDU4MThjMDkyMTdlMjU5Y2VkZDNmOTE0IiwidGFnIjoiIn0%3D; expires=Wed, 17 Jun 2026 14:11:48 GMT; Max-Age=7200; path=/; httponly; samesite=lax"
+            }
+          ],
+          "cookie": [],
+          "body": "[\n    {\n        \"id\": \"1\",\n        \"name\": \"Global Tech\",\n        \"industry\": \"IT\",\n        \"employees_count\": \"500\"\n    },\n    {\n        \"id\": \"2\",\n        \"name\": \"ТОВ БудПром\",\n        \"industry\": \"Будівництво\",\n        \"employees_count\": \"120\"\n    },\n    {\n        \"id\": \"3\",\n        \"name\": \"АгроСвіт\",\n        \"industry\": \"Сільське господарство\",\n        \"employees_count\": \"350\"\n    }\n]"
+        }
+      ]
+    },
+    {
+      "name": "2. Get Company By ID",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/companies/1",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "companies",
+            "1"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "2. Get Company By ID",
+          "originalRequest": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/companies/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "companies",
+                "1"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Host",
+              "value": "localhost:8000"
+            },
+            {
+              "key": "Connection",
+              "value": "close"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "PHP/8.5.0"
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, private"
+            },
+            {
+              "key": "Date",
+              "value": "Wed, 17 Jun 2026 12:12:23 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Set-Cookie",
+              "value": "XSRF-TOKEN=eyJpdiI6IjZ3M3NKWktlYzNUYTJWVE5GWndrS1E9PSIsInZhbHVlIjoiNGVvaVErNnAyNlQyOWNFQWYxanBIWnZjb1ZpRUQ1d3VVNDRSdXJ1SEwwWkRoSHdHZTA2eUh3eU9RMENjb0g2Vi9uMjBoVW5tamsrd1cySHgrRHUxMytUTjcxU0lNbkJaREdsdmFNRzVKZUE0MXE0WDR6aFRCaTBoYkZhc0NDTG0iLCJtYWMiOiIyYjQ5ZWU0NzlmZjBlNjI1NjQ5MzA4ZTM0NmVjNzMzNDMwMjVjMTM0NDY1N2YzNmNiOTlkZjUyZGFmNzg3Y2QyIiwidGFnIjoiIn0%3D; expires=Wed, 17 Jun 2026 14:12:23 GMT; Max-Age=7200; path=/; samesite=lax"
+            },
+            {
+              "key": "Set-Cookie",
+              "value": "laravel-session=eyJpdiI6IllYMjVFWGxvdklXUmUyTDNvK1pJYXc9PSIsInZhbHVlIjoiSGJrK2J0b2lWVDRNdktFcGs0amZoYW8xSTQxZ21qS09ZYThwdW5ZR2F0MWxxaHhoVmYralEvN2dZMnI3U1Nrd2h1S21YN2JqckRuaytydE5MbW9xMEFBQVRMTkN0OG5oRDZEc0tLcVBucURiK283dVhVTGdKTlZoYU9lYU54a0oiLCJtYWMiOiIyZjQ0NTlkMTBlNGQxYjRlNjI2ZTdhOGM4ZDIwZjM3MGM2NDg3ZGViZTYzNDM3MGFhN2U5YTRjM2JhOTAyZGUzIiwidGFnIjoiIn0%3D; expires=Wed, 17 Jun 2026 14:12:23 GMT; Max-Age=7200; path=/; httponly; samesite=lax"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"id\": \"1\",\n    \"name\": \"Global Tech\",\n    \"industry\": \"IT\",\n    \"employees_count\": \"500\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "3. Create Company",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"ТОВ Інновації\",\n  \"industry\": \"Логістика\",\n  \"employees_count\": 85\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/companies",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "companies"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "3. Create Company",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"ТОВ Інновації\",\n  \"industry\": \"Логістика\",\n  \"employees_count\": 85\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/companies",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "companies"
+              ]
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Host",
+              "value": "localhost:8000"
+            },
+            {
+              "key": "Connection",
+              "value": "close"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "PHP/8.5.0"
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, private"
+            },
+            {
+              "key": "Date",
+              "value": "Wed, 17 Jun 2026 12:12:29 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Set-Cookie",
+              "value": "XSRF-TOKEN=eyJpdiI6ImJIYm9pMFF1UDlPeTVkMlYxWHRoaFE9PSIsInZhbHVlIjoiRU9mS0Q0TmFOWDYxUFRrOGl0UGRpQlZqWmdYMjUrUnF1SysrSUNab1hMeVdybXIvN0JTSDdmalhMY1lFUi9ZRGZxbDAySmN5ZGNML1p6aENEa3hSU1ArVlY3djFHZWVLdlc1Z0xNZDdUWGxDNnJ6WFFVdFM0MjkzbzBBT29ZNFoiLCJtYWMiOiI0YTJjZDJlOWUzZjkyMjMzNjMyNWIzNDA5YTIwZmMxZWVlNzFlMjc2MGU1YTM4OTY1ZTQ5MWRjNjcxZmUxOWNjIiwidGFnIjoiIn0%3D; expires=Wed, 17 Jun 2026 14:12:29 GMT; Max-Age=7200; path=/; samesite=lax"
+            },
+            {
+              "key": "Set-Cookie",
+              "value": "laravel-session=eyJpdiI6IjVRTE5ONHVGRWM0aXZIN21ONzdZVnc9PSIsInZhbHVlIjoiZ1hXL3lYWEV0NUVoVlhsa1c3eHZpSFU5QUZCekE4MElKMG1lSGxici9JWGdNRU1UdWhQZ0lndmdEZzZLbGYwZmhEbnJ2R2p1RFBaMGR5bGQ4RlhHYzM1dGwzZmkraHJsWkNVM1B6TzAyaVB0VWlCU0tGR2FDc1J1K2dmWnluRzgiLCJtYWMiOiJjOWNjYTRlYmY0NWNiMDU5YjNjY2IzZTViYjExYjcxZjYxZGE1YTQzNzA2NWRhY2FlMWNkZDk1OGQwOWY0ZWY2IiwidGFnIjoiIn0%3D; expires=Wed, 17 Jun 2026 14:12:29 GMT; Max-Age=7200; path=/; httponly; samesite=lax"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"name\": \"ТОВ Інновації\",\n    \"industry\": \"Логістика\",\n    \"employees_count\": 85,\n    \"id\": \"17\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "4. Update Company",
+      "request": {
+        "method": "PATCH",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"employees_count\": 150,\n  \"name\": \"Global Tech Updated\"\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/companies/1",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "companies",
+            "1"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "4. Update Company",
+          "originalRequest": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"employees_count\": 150,\n  \"name\": \"Global Tech Updated\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/companies/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "companies",
+                "1"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Host",
+              "value": "localhost:8000"
+            },
+            {
+              "key": "Connection",
+              "value": "close"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "PHP/8.5.0"
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, private"
+            },
+            {
+              "key": "Date",
+              "value": "Wed, 17 Jun 2026 12:13:22 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Set-Cookie",
+              "value": "XSRF-TOKEN=eyJpdiI6ImY3WHBYbDdyS0Fhc2lzbEIvazRPbmc9PSIsInZhbHVlIjoiRnhDTmh2dDFBeExNNkJsb2lTZjRzMVcrbWlINmRoZnFjYy91WDR4OTlFMmwweDBudXArQ0dFUms5clYvZXdKdlFoNlN3NTA1VEJqWkdaZjUwUXdXQlJKakxzMENocXo5UVFxRjhUUm1naER2aUpjcHB4N0htUjVSQmlMR3JFTVgiLCJtYWMiOiI3ZWVjNTViZDAxNmVmODUyZGZiOWUwOWMyYWUxYzhmYmEyMWUyZjkwZDA4NTA3MmQwYjI3ZTY0NmNjNjY3MzUwIiwidGFnIjoiIn0%3D; expires=Wed, 17 Jun 2026 14:13:22 GMT; Max-Age=7200; path=/; samesite=lax"
+            },
+            {
+              "key": "Set-Cookie",
+              "value": "laravel-session=eyJpdiI6IlBNZlZIOU80MUZnQnZocGdJNTk4MVE9PSIsInZhbHVlIjoieHZ1SXpFRnhZaUdnMEI2Z3N1TlF3TjVkY0g4UzJ1SFpLbnVaaGRHRjdhTk5rZUgzbWhyL1ZMY1VYd0pEQmgrQ2FaL2NXU3VmYUhzQm53c3p5Y21zMkZFRFdTNXdya01GYzM5VndZUW91eVVqdTYyTmZONXU2cTFORUpySXI2WHQiLCJtYWMiOiIzZmI4NmFiNWI5YTM5MGNkZTA1MzEzN2Q4MjExYmM1MDllMWNhZmFjYjRhYzMwZmU5ZDI3NmYxOTA5ZDk3NTNlIiwidGFnIjoiIn0%3D; expires=Wed, 17 Jun 2026 14:13:22 GMT; Max-Age=7200; path=/; httponly; samesite=lax"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"id\": \"1\",\n    \"name\": \"Global Tech Updated\",\n    \"industry\": \"IT\",\n    \"employees_count\": 150\n}"
+        }
+      ]
+    },
+    {
+      "name": "5. Delete Company",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/companies/1",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "companies",
+            "1"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "5. Delete Company",
+          "originalRequest": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/companies/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "companies",
+                "1"
+              ]
+            }
+          },
+          "status": "No Content",
+          "code": 204,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Host",
+              "value": "localhost:8000"
+            },
+            {
+              "key": "Connection",
+              "value": "close"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "PHP/8.5.0"
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, private"
+            },
+            {
+              "key": "Date",
+              "value": "Wed, 17 Jun 2026 12:13:29 GMT"
+            },
+            {
+              "key": "Set-Cookie",
+              "value": "XSRF-TOKEN=eyJpdiI6IlQyS2Z0ZEpVU0RnS0NEZHE3dThiMHc9PSIsInZhbHVlIjoiakxORTlFMWdxcFRJaXhWRWc4U3pES1RqTm1MN0kvbktkejdnL0lmdTFrSHNRdjJDSVZrbDNobUhOTDB0WGJ6M05wVFloeWpielJFeVRidWZCWnhNVWNoeTF2N1V3ZGhwYTNnSkRsWHUzTHJERm1ERzV3ejNDWGVBaHhLeE5ISW0iLCJtYWMiOiIxNTAzY2FiZGJhZTgxM2Y0MTliMzM3NTcwYTljZmYyZTRlNDFhZjcyNmFmODhlY2U3YzZiMDFiYmIzYjYyM2RjIiwidGFnIjoiIn0%3D; expires=Wed, 17 Jun 2026 14:13:29 GMT; Max-Age=7200; path=/; samesite=lax"
+            },
+            {
+              "key": "Set-Cookie",
+              "value": "laravel-session=eyJpdiI6IitxcWNZRHZ4L003eFJ0OTV5c1RlN1E9PSIsInZhbHVlIjoiVU1hTUJTNlcwSWZCaDc5Q3pjSHRnS3dYVHRGaHE2bTIzT1RQeGVZN2dGV1g0MGcyclBnVk1VZWpjZXlQeWszTkkzU3pGRTF3N2R5VlhMRU4wcXovd2NoNFhBSVpuTm5WT0hGc084b3NzSTcwQUs5TjhOK0FkeTNTTmRtemFIM0IiLCJtYWMiOiJmNTllNzc3OGFlNjljZWZjMGMwMDk2MGI2OTQ1MjFjNWNiNDMwNzg0MDRiY2VhZjJlODlhZDNjNWY2NTAwOTNmIiwidGFnIjoiIn0%3D; expires=Wed, 17 Jun 2026 14:13:29 GMT; Max-Age=7200; path=/; httponly; samesite=lax"
+            }
+          ],
+          "cookie": [],
+          "body": null
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:8000"
+    }
+  ]
+}
