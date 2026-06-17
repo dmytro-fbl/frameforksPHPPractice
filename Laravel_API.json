@@ -1,0 +1,147 @@
+{
+  "info": {
+    "name": "Laravel Companies API",
+    "description": "CRUD operations for Companies based on the provided Laravel Controller and web.php routes",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "1. Get All Companies",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/companies",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "companies"
+          ]
+        }
+      }
+    },
+    {
+      "name": "2. Get Company By ID",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/companies/1",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "companies",
+            "1"
+          ]
+        }
+      }
+    },
+    {
+      "name": "3. Create Company",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"ТОВ Інновації\",\n  \"industry\": \"Логістика\",\n  \"employees_count\": 85\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/companies",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "companies"
+          ]
+        }
+      }
+    },
+    {
+      "name": "4. Update Company",
+      "request": {
+        "method": "PATCH",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"employees_count\": 150,\n  \"name\": \"Global Tech Updated\"\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/companies/1",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "companies",
+            "1"
+          ]
+        }
+      }
+    },
+    {
+      "name": "5. Delete Company",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/companies/1",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "companies",
+            "1"
+          ]
+        }
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:8000",
+      "type": "string"
+    }
+  ]
+}
